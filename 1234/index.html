@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神秘運勢占卜館</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔮 運勢占卜館 🔮</h1>
+            <p>✨ 讓神秘力量指引您的方向 ✨</p>
+        </div>
+
+        <div class="content">
+            <!-- 介紹區 -->
+            <div id="introSection" class="intro-section">
+                <p>親愛的訪客，歡迎來到我們的神秘占卜館！</p>
+                <p>選擇一種占卜方式，讓運勢為您揭示今日的機遇與挑戰。</p>
+            </div>
+
+            <!-- 按鈕區 -->
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="startDivination('random')">🎲 隨機占卜</button>
+                <button class="btn btn-secondary" onclick="startDivination('choice')">🎯 選擇占卜</button>
+            </div>
+
+            <!-- 選擇選項區 -->
+            <div id="choiceSection" style="display: none; margin-bottom: 20px;">
+                <p style="text-align: center; margin-bottom: 15px; font-weight: 600;">選擇您想要的占卜類型：</p>
+                <div id="choiceButtons" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;"></div>
+            </div>
+
+            <!-- 加載中 -->
+            <div id="loadingSection" style="display: none;">
+                <div class="loading">🌟</div>
+                <p style="text-align: center; color: #636e72;">占卜中...</p>
+            </div>
+
+            <!-- 結果區 -->
+            <div id="resultSection" class="result-section">
+                <div class="result-card">
+                    <div class="result-title">
+                        <span class="emoji" id="resultEmoji"></span>
+                        <span id="resultName"></span>
+                    </div>
+                    <div class="result-aspects" id="resultAspects"></div>
+                    <div class="result-message" id="resultMessage"></div>
+                </div>
+                <button class="again-button" onclick="resetDivination()">🔄 再占卜一次</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
